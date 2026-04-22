@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>行動清單挑戰</title><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="checklist">
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html">從種子到杯中，減碳在手中</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首頁</a>
+      <a href="why-carbon.html">為什麼要減碳</a>
+      <a href="carbon-elements.html">碳排元素</a>
+      <a href="carbon-basics.html">基礎知識</a>
+      <a href="action-plan.html">實戰方案</a>
+      <a href="checklist.html">行動清單</a>
+      <a href="about.html">教材介紹</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>單元 5：行動清單挑戰</h2>
+      <p>請選出你認為真正有助於咖啡廳減碳的做法</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card reveal">
+        <h3>請勾選正確的減碳行動</h3>
+
+        <div class="checklist" id="actionChecklistQuiz">
+          <label class="check-item">
+            <input type="checkbox" value="a">
+            <span>定期檢查冷藏設備與冷氣效率，避免不必要耗電</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" value="b">
+            <span>為了方便流程，大量增加一次性包材使用</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" value="c">
+            <span>鼓勵顧客自備杯，並提供簡單優惠</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" value="d">
+            <span>增加小量多次配送，讓補貨更頻繁</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" value="e">
+            <span>重新規劃原料採購與配送頻率，減少不必要運輸</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" value="f">
+            <span>尖峰與離峰時段都讓設備維持最高運轉，不做調整</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" value="g">
+            <span>在店內向顧客傳達減碳作法與品牌永續理念</span>
+          </label>
+
+          <label class="check-item">
+            <input type="checkbox" value="h">
+            <span>設備老舊也沒關係，只要還能用就先不管</span>
+          </label>
+        </div>
+
+        <div style="height:12px"></div>
+        <button class="btn btn-primary" onclick="checkActionChecklistQuiz()">檢查答案</button>
+        <button class="btn btn-secondary" onclick="resetActionChecklistQuiz()">重新作答</button>
+      </div>
+
+      <div class="card reveal">
+        <h3>作答結果</h3>
+        <div id="actionChecklistResult" class="summary-box">
+          請先勾選你認為正確的減碳行動，再按下「檢查答案」。
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <h3>整體學習進度</h3>
+      <p class="small-note">完成前面活動與本單元後，這裡會顯示你的整體學習狀態。</p>
+      <div class="progress-wrap"><div class="progress-bar" id="globalProgress"></div></div>
+      <div style="height:10px"></div>
+      <div id="globalProgressText" class="small-note">目前尚未完成活動。</div>
+    </div>
+
+    <div class="hero-actions">
+      <a class="btn btn-secondary" href="about.html">前往教材介紹</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>從種子到杯中，減碳在手中</strong></p>
+    <p>給咖啡廳管理層的互動式碳排學習平台。</p>
+    <p>本網站有使用 chatGPT 工具製作。</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

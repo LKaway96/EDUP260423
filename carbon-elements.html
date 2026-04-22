@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>碳排元素</title><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="carbon-elements">
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html">從種子到杯中，減碳在手中</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首頁</a>
+      <a href="why-carbon.html">為什麼要減碳</a>
+      <a href="carbon-elements.html">碳排元素</a>
+      <a href="carbon-basics.html">基礎知識</a>
+      <a href="action-plan.html">實戰方案</a>
+      <a href="checklist.html">行動清單</a>
+      <a href="about.html">教材介紹</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-title reveal">
+      <h2>從種子到杯中：咖啡廳的碳排元素</h2>
+      <p>先看內容，再玩第一個互動挑戰</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card reveal">
+        <h3>原料</h3>
+        <p>咖啡豆、牛奶、糖漿、甜點原料等，在種植、生產與包裝時都可能帶來碳排。</p>
+      </div>
+      <div class="card reveal">
+        <h3>運輸</h3>
+        <p>原料從產地到供應商，再從供應商到門市，距離越長、次數越多，通常碳排也越高。</p>
+      </div>
+      <div class="card reveal">
+        <h3>製作</h3>
+        <p>咖啡機、冰箱、製冰機、冷氣、照明等都是日常高頻率耗能設備。</p>
+      </div>
+      <div class="card reveal">
+        <h3>銷售與包裝</h3>
+        <p>外帶杯、杯蓋、吸管、紙袋、外送包材，都是顧客看得見、也很容易累積的碳排來源。</p>
+      </div>
+      <div class="card reveal">
+        <h3>間接碳排</h3>
+        <p>除了店內設備與包材，像是員工通勤、外送配送、顧客交通方式等，也屬於容易被忽略的間接碳排來源。</p>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="section-title">
+        <h2>互動挑戰 1：找碳排</h2>
+        <p>在咖啡廳場景中找出 6 個主要碳排來源</p>
+      </div>
+
+      <div class="game-panel">
+        <div class="scene-game" id="sceneGame">
+          <div class="wall"></div>
+          <div class="floor"></div>
+          <div class="sign">點選你覺得會造成碳排的地方，別忘了間接碳排</div>
+
+          <div class="obj counter" style="display:grid;place-items:center;color:white;font-weight:700;">工作台</div>
+
+          <div class="obj machine" style="display:grid;place-items:center;color:white;font-weight:700;">
+            咖啡機
+          </div>
+
+          <div class="obj fridge" style="display:grid;place-items:center;color:#4a4039;font-weight:700;">
+            冰箱
+          </div>
+
+          <div class="obj cups" style="display:grid;place-items:center;color:#4a4039;font-weight:700;">
+            包材
+          </div>
+
+          <div class="obj plant"></div>
+
+          <div class="obj light" style="display:grid;place-items:center;color:#7a5a28;font-weight:700;font-size:14px;">
+            照明
+          </div>
+
+          <div class="obj light two" style="display:grid;place-items:center;color:#7a5a28;font-weight:700;font-size:14px;">
+            照明
+          </div>
+
+          <div class="obj" style="left:4%;bottom:18%;width:16%;height:18%;background:#d2b187;border-radius:16px;display:grid;place-items:center;color:#4a4039;font-weight:700;">
+            配送
+          </div>
+
+          <div class="obj" style="left:38%;bottom:14%;width:16%;height:14%;background:#8aa0b2;border-radius:16px;color:white;display:grid;place-items:center;font-weight:700;">
+            通勤
+          </div>
+
+          <div class="game-item" data-id="machine" style="right:20%; bottom:42%; width:18%; height:18%;"></div>
+          <div class="game-item" data-id="fridge" style="right:6%; bottom:24%; width:12%; height:36%;"></div>
+          <div class="game-item" data-id="cups" style="left:14%; bottom:48%; width:14%; height:10%;"></div>
+          <div class="game-item" data-id="light" style="left:18%; top:100px; width:11%; height:8%;"></div>
+          <div class="game-item" data-id="delivery" style="left:4%; bottom:18%; width:16%; height:18%;"></div>
+          <div class="game-item" data-id="commute" style="left:38%; bottom:14%; width:16%; height:14%;"></div>
+        </div>
+
+        <div class="info-box">
+          <p class="score-chip">已找到：<span id="foundCount">0</span> / 6</p>
+          <div style="height:12px"></div>
+          <div class="progress-wrap">
+            <div class="progress-bar" id="findProgress"></div>
+          </div>
+          <div style="height:12px"></div>
+          <div id="findInfo" class="summary-box">請先點選場景中的物件，找出主要碳排來源。</div>
+          <div style="height:12px"></div>
+          <button class="btn btn-secondary" onclick="resetFindGame()">重新開始</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="carbon-basics.html">下一頁：基礎知識</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>從種子到杯中，減碳在手中</strong></p>
+    <p>給咖啡廳管理層的互動式碳排學習平台。</p>
+    <p>本網站有使用 chatGPT 工具製作。</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
