@@ -26,77 +26,25 @@
   <div class="container">
     <div class="section-title reveal">
       <h2>單元 5：行動清單挑戰</h2>
-      <p>請選出你認為真正有助於咖啡廳減碳的做法</p>
+      <p>請閱讀題目內容判斷是否是有助於咖啡廳減碳的做法</p>
     </div>
 
-    <div class="grid-2">
-      <div class="card reveal">
-        <h3>請勾選正確的減碳行動</h3>
-
-        <div class="checklist" id="actionChecklistQuiz">
-          <label class="check-item">
-            <input type="checkbox" value="a">
-            <span>定期檢查冷藏設備與冷氣效率，避免不必要耗電</span>
-          </label>
-
-          <label class="check-item">
-            <input type="checkbox" value="b">
-            <span>為了方便流程，大量增加一次性包材使用</span>
-          </label>
-
-          <label class="check-item">
-            <input type="checkbox" value="c">
-            <span>鼓勵顧客自備杯，並提供簡單優惠</span>
-          </label>
-
-          <label class="check-item">
-            <input type="checkbox" value="d">
-            <span>增加小量多次配送，讓補貨更頻繁</span>
-          </label>
-
-          <label class="check-item">
-            <input type="checkbox" value="e">
-            <span>重新規劃原料採購與配送頻率，減少不必要運輸</span>
-          </label>
-
-          <label class="check-item">
-            <input type="checkbox" value="f">
-            <span>尖峰與離峰時段都讓設備維持最高運轉，不做調整</span>
-          </label>
-
-          <label class="check-item">
-            <input type="checkbox" value="g">
-            <span>在店內向顧客傳達減碳作法與品牌永續理念</span>
-          </label>
-
-          <label class="check-item">
-            <input type="checkbox" value="h">
-            <span>設備老舊也沒關係，只要還能用就先不管</span>
-          </label>
-        </div>
-
-        <div style="height:12px"></div>
-        <button class="btn btn-primary" onclick="checkActionChecklistQuiz()">檢查答案</button>
-        <button class="btn btn-secondary" onclick="resetActionChecklistQuiz()">重新作答</button>
-      </div>
-
-      <div class="card reveal">
-        <h3>作答結果</h3>
-        <div id="actionChecklistResult" class="summary-box">
-          請先勾選你認為正確的減碳行動，再按下「檢查答案」。
-        </div>
-      </div>
+    <!-- 測驗進行區塊 -->
+    <div class="card reveal" id="checklistCard">
+      <h3>行動檢核：這個做法好嗎？</h3>
+      <div id="checklistQBox"></div>
+      <div id="checklistOptions" class="choice-list" style="margin-top: 16px;"></div>
+      <div id="checklistFeedback" class="feedback" style="display: none; margin-top: 16px;"></div>
     </div>
 
-    <div class="card reveal">
-      <h3>整體學習進度</h3>
-      <p class="small-note">完成前面活動與本單元後，這裡會顯示你的整體學習狀態。</p>
-      <div class="progress-wrap"><div class="progress-bar" id="globalProgress"></div></div>
-      <div style="height:10px"></div>
-      <div id="globalProgressText" class="small-note">目前尚未完成活動。</div>
+    <!-- 結算總結區塊 (初始隱藏) -->
+    <div class="card reveal" id="checklistSummaryCard" style="display: none;">
+      <h3>📊 經營測驗總結</h3>
+      <div id="checklistSummaryContent"></div>
+      <button class="btn btn-primary" onclick="initChecklist(true)" style="margin-top: 24px;">重新挑戰</button>
     </div>
 
-    <div class="hero-actions">
+    <div class="hero-actions" id="nextLevelAction" style="display: none;">
       <a class="btn btn-secondary" href="about.html">前往教材介紹</a>
     </div>
   </div>
