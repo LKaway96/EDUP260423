@@ -47,9 +47,15 @@
           <span class="score-chip">目前分數：<span id="quizScore">0</span></span>
         </div>
       </div>
+      <!-- 結算總結區塊 (初始隱藏) -->
+      <div id="quizSummaryCard" style="display: none; margin-top: 16px;">
+        <h3>📊 實戰方案測驗總結</h3>
+        <div id="quizSummaryContent"></div>
+        <button class="btn btn-secondary" onclick="initQuiz(true)" style="margin-top: 24px;">重新挑戰</button>
+      </div>
     </div>
 
-    <div class="hero-actions">
+      <div class="hero-actions" id="nextLevelAction" style="display: none;">
       <a class="btn btn-primary" href="checklist.html">下一頁：行動清單</a>
     </div>
   </div>
